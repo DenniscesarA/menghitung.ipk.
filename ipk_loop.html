@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Javascript.</title>
+<style>
+	body {
+		font-family: sans-serif;
+		margin: 10%
+	}
+</style>
+<link rel="stylesheet" href="bootstrap.min.css"  >
+</head>
+<body>
+<div class="container">
+        <h1 align="center"><u>IPK SEMESTER 1</u></h1>
+        <hr>
+        <p class="text-info" align="center">
+            Nama : Dennis Cesar Al Haffidz <br>
+            NIM : 20210121022 <br>
+            Prodi : Sistem Informasi 1/2
+        </p>
+        <div class="row">
+            <div class="col col-7" >
+                <table class="table table-striped table-hover">
+                	<tr>
+                		<th>Matkul</th>
+                		<script>
+                			var matkul = ["General English","Sistem dan Tekhnologi Informasi","Algoritma dan Pemrograman","Pancasila dan Kewarganegaraan","Matematika Bisnis","Managemen dan Organisasi","Pembangunan Karakter dan Etika Profesi"];
+                			for (let i = 0; i < matkul.length; i++) {
+		                        document.writeln("<tr><th>" + matkul[i] + "</td></tr>");
+		                    }
+                		</script>
+                	</tr>
+                </table>
+            </div>
+            <div class="col">
+                <table class="table table-striped table-hover">	
+                	<tr>
+                		<th>UTS</th>
+                
+		                <script>
+		                    var uts = [85, 85, 80, 88, 85, 92, 85];
+
+		                    // menggunakan perulangan untuk mencetak semua isi array
+		                    for (let n = 0; n < uts.length; n++) {
+		                        document.writeln("<tr><th>" + uts[n] + "</th></tr>");
+		                    }
+		                </script>
+                	</tr>
+                </table>
+            </div>
+            <div class="col">
+                <table class="table table-striped table-hover">
+	               <tr>	
+	               <th>UAS</th> 	
+	                <script>
+	                    var uas = [95, 90, 80, 85, 90, 84, 85];
+
+	                    // menggunakan perulangan untuk mencetak semua isi array
+	                    for (let y = 0; y < uas.length; y++) {
+	                        document.writeln("<tr><th>" + uas[y] + "</th></tr>");
+	                    }
+	                </script>
+	            	</tr>
+	        	</table>
+            </div>
+            <div class="col">
+                <table class="table table-striped table-hover">
+                	<tr>
+                		<th>Absensi</th>
+		                <script>
+		                    var absen = [100, 100, 100, 100, 100, 100, 100];
+
+		                    // menggunakan perulangan untuk mencetak semua isi array
+		                    for (let i = 0; i < absen.length; i++) {
+		                        document.writeln("<tr><th>" + absen[i] + " %</th></tr>");
+		                    }
+		                </script>
+                	</tr>
+                </table>
+            </div>
+            <div class="col ">
+                <table class="table table-striped table-hover">
+                	<tr>	
+                		<th>Nilai</th>
+                <script>
+                    var Genlish = uts[0] * 0.35 + uas[0] * 0.35 + absen[0] * 0.2;
+                    document.writeln("<tr><th>" + Genlish + "</th></tr>");
+
+                    var Sti = uts[1] * 0.35 + uas[1] * 0.35 + absen[1] * 0.2;
+                    document.writeln("<tr><th>" + Sti + "</th></tr>");
+
+                    var algo = uts[2] * 0.35 + uas[2] * 0.35 + absen[2] * 0.2;
+                    document.writeln("<tr><th>" + algo + "</th></tr>");
+
+                    var pkn = uts[3] * 0.35 + uas[3] * 0.35 + absen[3] * 0.2;
+                    document.writeln("<tr><th>" + pkn + "</th></tr>");
+
+                    var matematikabisnis = uts[4] * 0.35 + uas[4] * 0.35 + absen[4] * 0.2;
+                    document.writeln("<tr><th>" + matematikabisnis + "</th></tr>");
+
+                    var manajemen = uts[5] * 0.35 + uas[5] * 0.35 + absen[5] * 0.2;
+                    document.writeln("<tr><th>" + manajemen + "</th></tr>");
+
+                    var pembangunankarakter = uts[6] * 0.35 + uas[6] * 0.35 + absen[6] * 0.2;
+                    document.writeln("<tr><th>" + pembangunankarakter + "</th></tr>");
+                </script>
+            		</tr>
+        </table>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            
+            
+            <div class="col">
+            	<table class="table table-striped table-hover">
+            		<tr><th>Ipk</th>
+                <script>
+                    var IPK = (Genlish + Sti + algo + pkn + matematikabisnis + manajemen + pembangunankarakter) / 175;
+                    document.writeln("<tr><th>"+IPK.toFixed(2) + "</th></tr>");
+                    document.writeln("<tr><th>Grade</th></tr>");
+
+                    if (IPK >= 3.51 && IPK <= 4.00) {
+                        document.writeln("<tr><th>A</th></tr>");
+                    } else if (IPK >= 3.00 && IPK < 3.50) {
+                        document.writeln("<tr><th>B</th></tr>");
+                    } else if (IPK >= 2.76 && IPK < 3.00) {
+                        document.writeln("<tr><th>C</th></tr>");
+                    } else {
+                        document.writeln("<tr><th>D</th></tr>");
+                    }
+                </script>
+            	</tr>
+            </div>
+        </div>
+    </div>
+</body>
